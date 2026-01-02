@@ -68,12 +68,14 @@ jobs:
           body: |
             A new version has been released!
 
-            See the [release notes](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.version }}) for details.
+            See the [release notes](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.version }})
+            for details.
 
             ---
 
             새 버전이 릴리즈되었습니다!
 
-            자세한 내용은 [릴리즈 노트](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.version }})를 참조하세요.
+            자세한 내용은 [릴리즈 노트](https://github.com/${{ github.repository }}/releases/tag/v${{ steps.version.outputs.version }})를
+            참조하세요.
           repository-id: ${{ secrets.REPOSITORY_ID }}
           category-id: ${{ secrets.ANNOUNCEMENTS_CATEGORY_ID }}
