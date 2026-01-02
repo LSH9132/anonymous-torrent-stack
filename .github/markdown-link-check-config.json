@@ -7,7 +7,7 @@
       "pattern": "^http://127.0.0.1"
     },
     {
-      "pattern": "^https://github.com/yourusername"
+      "pattern": "^https://github.com/LSH9132/anonymous-torrent-stack"
     }
   ],
   "replacementPatterns": [],

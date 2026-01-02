@@ -44,7 +44,7 @@
 저장소를 클론하거나 소스 코드를 다운로드하세요:
 
 ```bash
-git clone https://github.com/yourusername/anonymous-torrent-stack.git
+git clone https://github.com/LSH9132/anonymous-torrent-stack.git
 cd anonymous-torrent-stack
 ```
 
