@@ -1,0 +1,38 @@
+# Environment files
+.env
+
+# Configuration files (may contain credentials)
+config/gluetun/*
+!config/gluetun/.gitkeep
+config/qbittorrent/*
+!config/qbittorrent/.gitkeep
+config/vpn/wireguard/*
+!config/vpn/wireguard/.gitkeep
+!config/vpn/wireguard/*.example
+config/vpn/openvpn/*
+!config/vpn/openvpn/.gitkeep
+!config/vpn/openvpn/*.example
+
+# Data directories
+data/qbittorrent/*
+!data/qbittorrent/.gitkeep
+data/downloads/*
+!data/downloads/.gitkeep
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Temporary files
+*.tmp
+*.temp

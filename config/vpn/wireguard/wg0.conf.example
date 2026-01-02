@@ -1,0 +1,62 @@
+# WireGuard Configuration Template
+#
+# This is an example WireGuard configuration file for custom VPN providers.
+# To use this:
+# 1. Copy this file: cp wg0.conf.example wg0.conf
+# 2. Fill in your VPN provider's details below
+# 3. Set VPN_PROVIDER=custom and VPN_TYPE=wireguard in .env
+#
+# For Mullvad, NordVPN, ProtonVPN, and other supported providers,
+# you don't need this file - just configure the .env file.
+
+[Interface]
+# Your WireGuard private key (keep this secret!)
+# Get this from your VPN provider's dashboard
+PrivateKey = YOUR_PRIVATE_KEY_HERE
+
+# Your assigned IP addresses (IPv4 and optionally IPv6)
+# Example: 10.68.45.123/32, fc00:bbbb:bbbb:bb01::4:2d7a/128
+Address = YOUR_IPV4_ADDRESS/32, YOUR_IPV6_ADDRESS/128
+
+# DNS servers (optional, Gluetun handles DNS with DoT by default)
+# Example: DNS = 10.64.0.1
+# DNS = 10.64.0.1
+
+[Peer]
+# VPN server's public key
+# Get this from your VPN provider
+PublicKey = SERVER_PUBLIC_KEY_HERE
+
+# Allowed IPs (usually 0.0.0.0/0 for all IPv4 and ::0/0 for all IPv6)
+# This routes all traffic through the VPN
+AllowedIPs = 0.0.0.0/0, ::0/0
+
+# VPN server endpoint (IP:PORT)
+# Example: Endpoint = 123.45.67.89:51820
+Endpoint = SERVER_IP:SERVER_PORT
+
+# Persistent keepalive (optional, recommended for NAT traversal)
+# Sends keepalive packets every 25 seconds
+PersistentKeepalive = 25
+
+# =================================================================
+# Example: Mullvad WireGuard Configuration
+# =================================================================
+# [Interface]
+# PrivateKey = aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789+/ABCDEFGH=
+# Address = 10.68.45.123/32, fc00:bbbb:bbbb:bb01::4:2d7a/128
+#
+# [Peer]
+# PublicKey = xYzAbC123456789+/DeF=
+# AllowedIPs = 0.0.0.0/0, ::0/0
+# Endpoint = 185.65.134.66:51820
+# PersistentKeepalive = 25
+
+# =================================================================
+# Notes
+# =================================================================
+# - Keep your private key secret! Never commit it to version control.
+# - The .gitignore file is configured to exclude all .conf files
+#   (except .example files) to prevent accidental commits.
+# - For better security, use the built-in provider support when available.
+# - WireGuard is generally faster and more secure than OpenVPN.

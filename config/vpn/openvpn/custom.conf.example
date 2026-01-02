@@ -1,0 +1,109 @@
+# OpenVPN Configuration Template
+#
+# This is an example OpenVPN configuration file for custom VPN providers.
+# To use this:
+# 1. Download your VPN provider's .ovpn config file
+# 2. Copy it here: cp provider.ovpn custom.conf
+# 3. Set these in .env:
+#    VPN_PROVIDER=custom
+#    VPN_TYPE=openvpn
+#    OPENVPN_CUSTOM_CONFIG=/gluetun/custom/custom.conf
+#
+# For Mullvad, NordVPN, ProtonVPN, and other supported providers,
+# you don't need this file - just configure the .env file.
+
+client
+dev tun
+proto udp
+remote vpn.example.com 1194
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+auth SHA512
+cipher AES-256-CBC
+ignore-unknown-option block-outside-dns
+block-outside-dns
+verb 3
+
+# Authentication (if using username/password)
+# Remove these lines and use OPENVPN_USER/OPENVPN_PASSWORD in .env instead
+# auth-user-pass
+
+# Or embed credentials (less secure)
+# <auth-user-pass>
+# username
+# password
+# </auth-user-pass>
+
+# Certificate Authority
+<ca>
+-----BEGIN CERTIFICATE-----
+YOUR_CA_CERTIFICATE_HERE
+Replace this with your VPN provider's CA certificate
+-----END CERTIFICATE-----
+</ca>
+
+# Client Certificate (if required by your provider)
+<cert>
+-----BEGIN CERTIFICATE-----
+YOUR_CLIENT_CERTIFICATE_HERE
+Some providers don't require this, you can remove this section if not needed
+-----END CERTIFICATE-----
+</cert>
+
+# Client Private Key (if required by your provider)
+<key>
+-----BEGIN PRIVATE KEY-----
+YOUR_PRIVATE_KEY_HERE
+Some providers don't require this, you can remove this section if not needed
+-----END PRIVATE KEY-----
+</key>
+
+# TLS Authentication Key (optional, for additional security)
+<tls-auth>
+-----BEGIN OpenVPN Static key V1-----
+YOUR_TLS_AUTH_KEY_HERE
+Some providers don't use this, you can remove this section if not needed
+-----END OpenVPN Static key V1-----
+</tls-auth>
+key-direction 1
+
+# =================================================================
+# Example: Mullvad OpenVPN Configuration
+# =================================================================
+# Note: Mullvad is deprecating OpenVPN. WireGuard is recommended.
+#
+# client
+# dev tun
+# proto udp
+# remote se-sto-ovpn-001.relays.mullvad.net 1194
+# resolv-retry infinite
+# nobind
+# persist-key
+# persist-tun
+# remote-cert-tls server
+# auth SHA512
+# cipher AES-256-CBC
+# verb 3
+# auth-user-pass
+# ca mullvad_ca.crt
+# tun-ipv6
+# script-security 2
+
+# =================================================================
+# Notes
+# =================================================================
+# - Keep your keys secret! Never commit them to version control.
+# - The .gitignore file is configured to exclude all .conf files
+#   (except .example files) to prevent accidental commits.
+# - WireGuard is generally recommended over OpenVPN for:
+#   * Better performance (faster speeds)
+#   * Stronger cryptography
+#   * Simpler configuration
+#   * Lower battery usage on mobile devices
+# - Use OpenVPN only if:
+#   * Your VPN provider doesn't support WireGuard
+#   * You need TCP mode (for restrictive networks)
+#   * You have specific OpenVPN requirements
