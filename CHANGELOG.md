@@ -131,5 +131,5 @@ This is the initial release. No upgrade path needed.
 
 ---
 
-[Unreleased]: https://github.com/yourusername/anonymous-torrent-stack/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourusername/anonymous-torrent-stack/releases/tag/v1.0.0
+[Unreleased]: https://github.com/LSH9132/anonymous-torrent-stack/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/LSH9132/anonymous-torrent-stack/releases/tag/v1.0.0

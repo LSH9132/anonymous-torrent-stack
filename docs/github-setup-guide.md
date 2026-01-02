@@ -64,16 +64,16 @@ git branch
 
 #### 2.2 사용자명 수정
 
-README 파일의 `yourusername`을 실제 GitHub 사용자명으로 변경:
+README 파일의 `LSH9132`을 실제 GitHub 사용자명으로 변경:
 
 ```bash
 # macOS
-find . -name "*.md" -type f -exec sed -i '' 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
-find . -name "*.yml" -type f -exec sed -i '' 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.md" -type f -exec sed -i '' 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.yml" -type f -exec sed -i '' 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
 
 # Linux
-find . -name "*.md" -type f -exec sed -i 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
-find . -name "*.yml" -type f -exec sed -i 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.md" -type f -exec sed -i 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.yml" -type f -exec sed -i 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
 ```
 
 **`YOUR_GITHUB_USERNAME`을 실제 GitHub 사용자명으로 변경하세요!**
@@ -488,7 +488,7 @@ git push origin v1.0.0
 **문제**: README의 배지가 404 오류
 
 **해결**:
-1. `yourusername`을 실제 사용자명으로 변경 확인
+1. `LSH9132`을 실제 사용자명으로 변경 확인
 2. 저장소가 Public인지 확인
 3. Actions가 한 번 이상 실행되었는지 확인
 
@@ -634,16 +634,16 @@ git branch
 
 #### 2.2 Update Username
 
-Replace `yourusername` with your actual GitHub username in all files:
+Replace `LSH9132` with your actual GitHub username in all files:
 
 ```bash
 # macOS
-find . -name "*.md" -type f -exec sed -i '' 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
-find . -name "*.yml" -type f -exec sed -i '' 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.md" -type f -exec sed -i '' 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.yml" -type f -exec sed -i '' 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
 
 # Linux
-find . -name "*.md" -type f -exec sed -i 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
-find . -name "*.yml" -type f -exec sed -i 's/yourusername/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.md" -type f -exec sed -i 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
+find . -name "*.yml" -type f -exec sed -i 's/LSH9132/YOUR_GITHUB_USERNAME/g' {} +
 ```
 
 **Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username!**
@@ -919,7 +919,7 @@ git push origin v1.0.0
 **Problem**: Badges in README show 404
 
 **Solution**:
-1. Verify `yourusername` replaced with actual username
+1. Verify `LSH9132` replaced with actual username
 2. Ensure repository is Public
 3. Wait for Actions to run at least once
 
