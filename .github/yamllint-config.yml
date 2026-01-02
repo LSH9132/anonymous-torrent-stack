@@ -3,10 +3,13 @@ extends: default
 
 rules:
   line-length:
-    max: 120
+    max: 150
     level: warning
   indentation:
     spaces: 2
+  brackets:
+    max-spaces-inside: 0
+    min-spaces-inside: 0
   comments:
     min-spaces-from-content: 1
   comments-indentation: {}

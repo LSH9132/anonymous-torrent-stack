@@ -88,8 +88,9 @@ jobs:
           PREV_VERSION=${PREV_VERSION#v}
 
           # 새 버전 비교 링크 추가
-          echo "[Unreleased]: https://github.com/${{ github.repository }}/compare/v$VERSION...HEAD" >> CHANGELOG.md.tmp
-          echo "[$VERSION]: https://github.com/${{ github.repository }}/compare/v$PREV_VERSION...v$VERSION" >> CHANGELOG.md.tmp
+          REPO="${{ github.repository }}"
+          echo "[Unreleased]: https://github.com/$REPO/compare/v$VERSION...HEAD" >> CHANGELOG.md.tmp
+          echo "[$VERSION]: https://github.com/$REPO/compare/v$PREV_VERSION...v$VERSION" >> CHANGELOG.md.tmp
 
           # 기존 링크 제거하고 새 링크 추가
           grep -v "^\[" CHANGELOG.md | head -n -1 > CHANGELOG.md.new
