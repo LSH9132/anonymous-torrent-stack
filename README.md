@@ -1,5 +1,22 @@
 # Anonymous Torrent Stack
 
+<div align="center">
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/yourusername/anonymous-torrent-stack)](https://github.com/yourusername/anonymous-torrent-stack/releases)
+[![CI](https://github.com/yourusername/anonymous-torrent-stack/workflows/CI/badge.svg)](https://github.com/yourusername/anonymous-torrent-stack/actions/workflows/ci.yml)
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)](https://www.docker.com/)
+[![WireGuard](https://img.shields.io/badge/WireGuard-88171A?logo=wireguard&logoColor=white)](https://www.wireguard.com/)
+
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/anonymous-torrent-stack?style=social)](https://github.com/yourusername/anonymous-torrent-stack/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/anonymous-torrent-stack?style=social)](https://github.com/yourusername/anonymous-torrent-stack/network/members)
+
+**English** | [한국어](README.ko.md)
+
+</div>
+
+---
+
 A Docker-based solution for anonymous torrenting using VPN (WireGuard/OpenVPN) with qBittorrent. Features automatic kill switch, DNS leak protection, and support for 60+ VPN providers.
 
 ## Features
